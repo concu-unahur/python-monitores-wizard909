@@ -14,7 +14,7 @@ def productor(monitor):
         time.sleep(2)
 
 
-class consumer(threading.Thread):
+class Consumidor(threading.Thread):
     def __init__(self, monitor):
         super().__init__()
         self.monitor = monitor
@@ -22,8 +22,7 @@ class consumer(threading.Thread):
     def run(self):
         while (True):
             
-            with self.monitor:          # Hace el acquire y al final un release
-            
+            with self.monitor:          # Hace el acquire y al final un release    
                 while len(items)<1:     # si no hay ítems para consumir
                     self.monitor.wait()  # espera la señal, es decir el notify
                 x = items.pop(0)     # saca (consume) el primer ítem
@@ -39,7 +38,7 @@ items = []
 items_monit = threading.Condition()
 
 # un thread que consume
-cons1 = consumer(items_monit)
+cons1 = Consumidor(items_monit)
 cons1.start()
 
 # El productor
