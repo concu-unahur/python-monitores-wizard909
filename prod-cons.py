@@ -6,12 +6,12 @@ logging.basicConfig(format='%(asctime)s.%(msecs)03d [%(threadName)s] - %(message
 
 
 def productor(monitor):
-    print("I'm the producer")
+    print("Voy a producir")
     for i in range(30):
         with monitor:          # hace el acquire y al final un release
             items.append(i)    # agrega un ítem
             monitor.notify()   # Notifica que ya se puede hacer acquire
-        time.sleep(1)
+        time.sleep(2)
 
 
 class consumer(threading.Thread):
@@ -27,7 +27,7 @@ class consumer(threading.Thread):
                     self.monitor.wait()  # espera la señal, es decir el notify
             x = items.pop(0)     # saca (consume) el primer ítem
             logging.info(f'Consumí {x}')
-            time.sleep(3)
+            time.sleep(1)
 
 
 # la lista de ítems a consumir
