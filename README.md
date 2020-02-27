@@ -43,3 +43,16 @@ En `prod-cons.py` hay un ejemplo a modo de guía de uso de un monitor. Miralo un
 Ahora modificá `prod-cons.py` para que haya varios threads consumiendo.
 
 Ahora agregá la posibilidad de que haya consumidores que consuman distintas cantidades (y no siempre un ítem).
+
+Ahora que cada consumidor pueda consumir solamente una vez (la cantidad que corresponda).
+
+## Bolitas
+Varios chicos participan de un juego que consiste en poner o sacar bolitas de un frasco.
+
+* La cantidad que sacan o ponen depende de cada participante, y no es siempre la misma.
+* El orden en que los participantes sacan o ponen bolitas no importa
+* **Importante:** si un jugador quiere sacar una cierta cantidad de bolitas, y no existe dicha cantidad en el frasco, debe quedar esperando (quizá junto a otros jugadores) a que haya bolitas en el frasco, es decir que
+otros jugadores pongan bolitas, para luego intentar sacar nuevamente (no importa el
+orden en que intenten sacar nuevamente).
+
+Hacer un script en python `bolitas.py` que mediante threads de participantes que sacan o ponen bolitas, simule el mencionado juego.
