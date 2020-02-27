@@ -60,3 +60,6 @@ otros jugadores pongan bolitas, para luego intentar sacar nuevamente (no importa
 orden en que intente sacar nuevamente).
 
 Hacer un script en python `bolitas.py` que mediante threads de participantes que sacan o ponen bolitas, simule el mencionado juego.
+
+## Hice todo y ya me aburrí...
+**¡Aprovechá y metele al TP!**
