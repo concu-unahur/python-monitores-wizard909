@@ -37,6 +37,8 @@ monitor.notify() # dar señal a algún thread que está esperando
 monitor.notifyAll() # dar señal a todos los threads que están esperando
 ```
 
+Se puede leer desde acá [python-threading-condition-objects](https://docs.python.org/3/library/threading.html#condition-objects).
+
 ## Productor y consumidores
 En `prod-cons.py` hay un ejemplo a modo de guía de uso de un monitor. Miralo un rato y asegurate de entenderlo. ¿Por qué el thread que consume sigue consumiendo hasta que se acaban los ítems?
 
