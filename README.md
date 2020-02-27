@@ -42,7 +42,7 @@ Se puede leer desde acá [python-threading-condition-objects](https://docs.pytho
 ## Productor y consumidores
 En `prod-cons.py` hay un ejemplo a modo de guía de uso de un monitor. Miralo un rato y asegurate de entenderlo. Respondé las siguientes preguntas:
 * ¿Por qué el thread que consume sigue consumiendo hasta que se acaban los ítems?
-* ¿Puede haber más de un consumidor consumiendo a la vez? ¿Por qué? ¿En qué parte de código se maneja eso?
+* Suponete que hubiera más de un thread consumiendo. ¿Puede haber más de un consumidor consumiendo a la vez? ¿Por qué? ¿En qué parte de código se maneja eso?
 
 Ahora modificá `prod-cons.py` para que haya varios threads consumiendo.
 
