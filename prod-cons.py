@@ -17,7 +17,6 @@ def productor(monitor):
 class consumer(threading.Thread):
     def __init__(self, monitor):
         super().__init__()
-        self.flag = True
         self.monitor = monitor
 
     def run(self):
