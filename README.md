@@ -6,15 +6,15 @@ La idea básica de un monitor es que funciona como un `Lock` pero que puede ser 
 monitor = threading.Condition()
 
 # Consumir un ítem
-with monitor:
+with monitor: # hace el acquire (y al final el release)
     while not hay_un_item():
-        monitor.wait()
+        monitor.wait() # espera hasta que se dé la señal
     consumir_un_item()
 
 # Producir un ítem
 with monitor:
     hacer_un_item()
-    monitor.notify()
+    monitor.notify() # notifica la señal
 
 
 # el with es una forma fácil de hacer acquire y release.
