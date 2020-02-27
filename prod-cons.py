@@ -21,10 +21,13 @@ class consumer(threading.Thread):
 
     def run(self):
         while (True):
+            
             with self.monitor:          # Hace el acquire y al final un release
+            
                 while len(items)<1:     # si no hay ítems para consumir
                     self.monitor.wait()  # espera la señal, es decir el notify
-            x = items.pop(0)     # saca (consume) el primer ítem
+                x = items.pop(0)     # saca (consume) el primer ítem
+            
             logging.info(f'Consumí {x}')
             time.sleep(1)
 
