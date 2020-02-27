@@ -52,9 +52,9 @@ Ahora que cada consumidor pueda consumir solamente una vez (la cantidad que corr
 Varios chicos participan de un juego que consiste en poner o sacar bolitas de un frasco.
 
 * La cantidad que sacan o ponen depende de cada participante, y no es siempre la misma.
-* El orden en que los participantes sacan o ponen bolitas no importa
-* **Importante:** si un jugador quiere sacar una cierta cantidad de bolitas, y no existe dicha cantidad en el frasco, debe quedar esperando (quizá junto a otros jugadores) a que haya bolitas en el frasco, es decir que
+* El orden en que los participantes sacan o ponen bolitas no importa.
+* **Importante:** si un jugador quiere sacar una cierta cantidad de bolitas, y no existe dicha cantidad en el frasco, debe quedar esperando (quizá junto a otros jugadores) a que haya bolitas en el frasco, es decir a que
 otros jugadores pongan bolitas, para luego intentar sacar nuevamente (no importa el
-orden en que intenten sacar nuevamente).
+orden en que intente sacar nuevamente).
 
 Hacer un script en python `bolitas.py` que mediante threads de participantes que sacan o ponen bolitas, simule el mencionado juego.
